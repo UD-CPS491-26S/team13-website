@@ -82,7 +82,11 @@ body {
 
 .hero {
   padding: 5rem 0 4rem;
-  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.2), transparent 45%);
+  background: radial-gradient(
+    circle at top right,
+    rgba(56, 189, 248, 0.2),
+    transparent 45%
+  );
 }
 
 .eyebrow {
