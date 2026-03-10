@@ -47,9 +47,27 @@
               <p class="timeline-meta">Sprint 0 • Completed</p>
               <h2>Introduction</h2>
               <p>
-                Sprint 0 focused on building the foundation: client alignment,
-                Django onboarding, repo safety, communication setup, and local
-                database snapshots to reduce production risk.
+                Sprint 0 was focused on building a strong foundation for the
+                  project. In our meeting with Dr. Laura Vorachek, the team
+                  confirmed priority features, issues and bugs that needed to be
+                  addressed as well as improvements we could offer. To address
+                  limited Django 4 experience, the team used structured
+                  onboarding resources, including *Django 4 by Example*, its
+                  GitHub materials, and CPS 242 notes, which helped members gain
+                  practical fluency in core framework concepts. The team also
+                  established a safe development workflow by creating a full
+                  working copy of the repository that preserved historical
+                  commit data while isolating development from production, and
+                  adopted Jira for task tracking, sprint visibility, and
+                  requirement traceability. Key early challenges around
+                  communication, local deployment setup, and production-linked
+                  database risk were mitigated through standardized
+                  collaboration tools (Google Chat/Meet), documented local
+                  environment configuration, and creation of isolated local
+                  databases from a production dump. Overall, these steps
+                  improved coordination, maintainability, and technical
+                  stability, positioning the team for more efficient feature
+                  development and testing in later sprints.
               </p>
             </article>
 
@@ -81,10 +99,17 @@
               <p class="timeline-meta">Sprint 1 • Active</p>
               <h2>Week 1-5</h2>
               <p>
-                We focused on fixes, started planning for a newer Django
-                version, and resolved issues with admin login, local deployment
-                setup, and database import behavior affecting page loading.
-              </p>
+               During this phase, the team began implementing key fixes while also
+               responding to faculty guidance to migrate the project to a newer
+               Django version, but progress was complicated by several technical issues.
+               We encountered persistent problems signing into the admin account and
+               struggled to deploy a stable local development instance because local setup
+               and configuration documentation was incomplete. To safely test changes against
+               production-like data, we created snapshot duplicates of the database; however,
+               early on, the local_copy export/import process malfunctioned by inserting a template
+               form instead of the actual dataset, and an SQL table initialized incorrectly in code,
+               which caused the site to load improperly until these issues were identified and addressed.
+               </p>
             </article>
 
             <div class="flow-arrow" aria-hidden="true"></div>
