@@ -1,4 +1,4 @@
-/* styles.css was the only file where I used predicitive text to write code with a little bit of AI,
+/* styles.css was the only file where I used predicitive text to write code with a the help of AI,
 but I made sure to review and look over the code so I understand it.*/
 
 :root {
@@ -258,14 +258,16 @@ body {
 
 .sprint-flow {
   display: flex;
-  align-items: stretch;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 1rem;
+  padding-bottom: 0.2rem;
 }
 
 .flow-box {
-  flex: 1;
-  min-width: 0;
+  flex: 0 0 auto;
   background: linear-gradient(
     165deg,
     rgba(31, 41, 55, 0.96),
@@ -285,43 +287,28 @@ body {
   margin: 0;
 }
 
+.description-box {
+  width: min(500px, 100%);
+}
+
 .sprint-zero-box {
   border-color: rgba(56, 189, 248, 0.85);
   box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.2);
 }
 
-.image-drop-box {
+.flow-image-box {
+  width: 220px;
   border-style: dashed;
   border-color: rgba(148, 163, 184, 0.7);
+  padding: 0.4rem;
 }
 
-.sprint-image-grid {
-  margin-top: 0.7rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.7rem;
-}
-
-.sprint-image-card {
-  margin: 0;
-  border: 1px dashed rgba(148, 163, 184, 0.7);
-  border-radius: 0.7rem;
-  overflow: hidden;
-  background: rgba(15, 23, 42, 0.55);
-}
-
-.sprint-image-card img {
+.flow-image-box img {
   width: 100%;
-  height: 120px;
+  height: 140px;
   display: block;
   object-fit: cover;
-}
-
-.sprint-image-card figcaption {
-  font-size: 0.82rem;
-  color: var(--muted);
-  text-align: center;
-  padding: 0.38rem 0.5rem;
+  border-radius: 0.55rem;
 }
 
 .flow-arrow {
@@ -480,6 +467,7 @@ body {
   .sprint-flow {
     flex-direction: column;
     align-items: stretch;
+    overflow-x: visible;
   }
 
   .flow-arrow {
@@ -503,13 +491,8 @@ body {
     transform: translate(-50%, -50%) rotate(135deg);
   }
 
-  .sprint-image-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 500px) {
-  .sprint-image-grid {
-    grid-template-columns: 1fr;
+  .description-box,
+  .flow-image-box {
+    width: 100%;
   }
 }
