@@ -48,26 +48,9 @@
               <h2>Introduction</h2>
               <p>
                 Sprint 0 was focused on building a strong foundation for the
-                  project. In our meeting with Dr. Laura Vorachek, the team
-                  confirmed priority features, issues and bugs that needed to be
-                  addressed as well as improvements we could offer. To address
-                  limited Django 4 experience, the team used structured
-                  onboarding resources, including *Django 4 by Example*, its
-                  GitHub materials, and CPS 242 notes, which helped members gain
-                  practical fluency in core framework concepts. The team also
-                  established a safe development workflow by creating a full
-                  working copy of the repository that preserved historical
-                  commit data while isolating development from production, and
-                  adopted Jira for task tracking, sprint visibility, and
-                  requirement traceability. Key early challenges around
-                  communication, local deployment setup, and production-linked
-                  database risk were mitigated through standardized
-                  collaboration tools (Google Chat/Meet), documented local
-                  environment configuration, and creation of isolated local
-                  databases from a production dump. Overall, these steps
-                  improved coordination, maintainability, and technical
-                  stability, positioning the team for more efficient feature
-                  development and testing in later sprints.
+                project. In our meeting with Dr. Laura Vorachek, the team
+                confirmed priority features, issues and bugs that needed to be
+                addressed as well as improvements we could offer.
               </p>
             </article>
 
@@ -99,17 +82,10 @@
               <p class="timeline-meta">Sprint 1 • Active</p>
               <h2>Week 1-5</h2>
               <p>
-               During this phase, the team began implementing key fixes while also
-               responding to faculty guidance to migrate the project to a newer
-               Django version, but progress was complicated by several technical issues.
-               We encountered persistent problems signing into the admin account and
-               struggled to deploy a stable local development instance because local setup
-               and configuration documentation was incomplete. To safely test changes against
-               production-like data, we created snapshot duplicates of the database; however,
-               early on, the local_copy export/import process malfunctioned by inserting a template
-               form instead of the actual dataset, and an SQL table initialized incorrectly in code,
-               which caused the site to load improperly until these issues were identified and addressed.
-               </p>
+                During this phase, the team began implementing key fixes while
+                also responding to guidance to migrate to a newer Django
+                version, while solving admin login and local deployment issues.
+              </p>
             </article>
 
             <div class="flow-arrow" aria-hidden="true"></div>
@@ -118,6 +94,145 @@
               <img src="images/design_overview.jpeg" alt="Sprint 1 image 1" />
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section commits-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Interactive Timeline</p>
+            <h2>Commit History and Updates</h2>
+            <p class="lead">
+              Click any card to expand the commit title, what changed, and why
+              it mattered.
+            </p>
+          </div>
+
+          <ol class="commit-timeline">
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">2/11/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Repo setup and Docker foundation</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    This update established the project’s working base and made
+                    the repository easier to run locally.
+                  </p>
+                  <ul>
+                    <li>
+                      Added a .gitignore and removed files that should not be
+                      tracked.
+                    </li>
+                    <li>
+                      Added Docker support with a Dockerfile and
+                      docker-compose.yml.
+                    </li>
+                    <li>
+                      Added documentation, Django project files, CSV data, media
+                      images, and updated README.md.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">2/13/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Docker fixes and local setup guide</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    This round refined the local development workflow and made
+                    the project easier to configure safely.
+                  </p>
+                  <ul>
+                    <li>
+                      Fixed Dockerfile and compose issues and updated the
+                      gitignore.
+                    </li>
+                    <li>Upgraded the base Python image from 3.9 to 3.11.</li>
+                    <li>
+                      Updated timezone settings, removed compiled cache and
+                      db.sqlite3, and added a local setup guide.
+                    </li>
+                    <li>
+                      Expanded setup instructions for running Django on the host
+                      with the database in Docker.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">2/20/26</span>
+                  <span class="commit-author">Greg</span>
+                  <span class="commit-title"
+                    >Name display fix and local SQL copy</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    This update corrected a display bug and added a clean local
+                    database copy for development and testing.
+                  </p>
+                  <ul>
+                    <li>
+                      Fixed the issue where some member names were showing as
+                      “None.”
+                    </li>
+                    <li>
+                      Improved name assembly logic using filtered name parts.
+                    </li>
+                    <li>
+                      Added a large SQL file, local_copy_clean.sql, for
+                      development and testing.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">3/9/26</span>
+                  <span class="commit-author">Henry</span>
+                  <span class="commit-title"
+                    >Admin list improvements and filters</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    This change made the Django admin members page more useful
+                    by exposing more data and filters.
+                  </p>
+                  <ul>
+                    <li>
+                      Expanded admin list_display with religion, nationality,
+                      race, ethnicity, county, and country.
+                    </li>
+                    <li>
+                      Added matching admin-side filters to speed up searching
+                      and review.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+          </ol>
         </div>
       </section>
     </main>
