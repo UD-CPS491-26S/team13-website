@@ -21,6 +21,7 @@
         <nav class="site-nav" id="site-nav">
           <a href="about.html">About</a>
           <a href="project.html">Project</a>
+          <a href="https://www.swj1894.org/">Demo</a>
           <a href="team.html">Team</a>
         </nav>
       </div>
@@ -33,7 +34,7 @@
           <h1>Capstone Progress Timeline</h1>
           <p class="lead">
             Track our milestones from planning to final delivery. The active
-            phase highlights what Team 13 is building right now.
+            phase highlights what Team 13 has built.
           </p>
           <a class="cta" href="index.html">Back to Home</a>
         </div>
@@ -75,7 +76,10 @@
             <div class="flow-arrow" aria-hidden="true"></div>
 
             <article class="flow-box flow-image-box">
-              <img src="images/Progress(1).jpeg" alt="Sprint 0 image 2" />
+              <img
+                src="images/after/After_homepage.jpeg"
+                alt="Sprint 0 image 2"
+              />
             </article>
 
             <div class="flow-arrow" aria-hidden="true"></div>
@@ -131,6 +135,40 @@
         </div>
       </section>
 
+      <section class="section sprint-flow-section" id="sprint-3">
+        <div class="container">
+          <div class="sprint-flow" aria-label="Sprint 3 content flow">
+            <article class="flow-box sprint-zero-box description-box">
+              <p class="timeline-meta">Sprint 3 • Completed</p>
+              <h2>Meeting 1 and Meeting 2</h2>
+              <p>
+                Sprint 3 is represented by our final two project meetings. The
+                work wrapped up the admin export changes, reviewed remaining
+                fixes, and confirmed the project was ready for delivery.
+              </p>
+            </article>
+
+            <div class="flow-arrow" aria-hidden="true"></div>
+
+            <article class="flow-box flow-image-box">
+              <img
+                src="images/after/after_admin_index.jpeg"
+                alt="Sprint 3 meeting 1 snapshot"
+              />
+            </article>
+
+            <div class="flow-arrow" aria-hidden="true"></div>
+
+            <article class="flow-box flow-image-box">
+              <img
+                src="images/after/after_admin_members.jpeg"
+                alt="Sprint 3 meeting 2 snapshot"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section commits-section" id="commits">
         <div class="container">
           <div class="section-heading">
@@ -152,7 +190,7 @@
                 <h2>Additional Features</h2>
                 <p class="lead">
                   These screenshots highlight the newest admin visualization
-                  work added to the project.
+                  work and the admin functions added to the project.
                 </p>
               </div>
 
@@ -181,6 +219,46 @@
                 <figure class="feature-card feature-card--django-upgrade">
                   <img src="images/new-addition/django_upgrade.svg" alt="Django upgrade 4.2 to 5.2 graphic" />
                   <figcaption>Upgraded Django: 4.2 → 5.2</figcaption>
+                </figure>
+              </div>
+
+              <div class="section-heading feature-subheading">
+                <p class="eyebrow">Admin Functions</p>
+                <h3>Members Page Exports and Actions</h3>
+                <p class="lead">
+                  The following screenshots capture the updated admin pages and
+                  export actions from the Members area.
+                </p>
+              </div>
+
+              <div class="feature-gallery feature-gallery--admin">
+                <figure class="feature-card">
+                  <img
+                    src="images/after/after_admin_index.jpeg"
+                    alt="After admin index page"
+                  />
+                  <figcaption>Admin index page</figcaption>
+                </figure>
+                <figure class="feature-card">
+                  <img
+                    src="images/after/after_admin_members.jpeg"
+                    alt="After admin members page"
+                  />
+                  <figcaption>Admin members page</figcaption>
+                </figure>
+                <figure class="feature-card">
+                  <img
+                    src="images/after/after_admin_membership_stats.jpeg"
+                    alt="After membership statistics page"
+                  />
+                  <figcaption>Membership statistics</figcaption>
+                </figure>
+                <figure class="feature-card">
+                  <img
+                    src="images/after/after_admin_proposer_graph.jpeg"
+                    alt="After proposer graph page"
+                  />
+                  <figcaption>Proposer relationship graph</figcaption>
                 </figure>
               </div>
             </div>
@@ -588,6 +666,38 @@
                     </li>
                     <li>
                       Merged PR #5: "search-by-other-profession" feature branch.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/25/26</span>
+                  <span class="commit-author">Henry</span>
+                  <span class="commit-title"
+                    >Admin export actions for members pages</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Added a second Excel export function, plus two CSV export
+                    functions that mirror the Excel export options in the admin
+                    Members action dropdown.
+                  </p>
+                  <ul>
+                    <li>
+                      Added a second Excel export function for the Members
+                      action dropdown.
+                    </li>
+                    <li>
+                      Added CSV export actions that mirror the Excel export
+                      behavior.
+                    </li>
+                    <li>
+                      Applied the same action set to the admin Members pages.
                     </li>
                   </ul>
                 </div>

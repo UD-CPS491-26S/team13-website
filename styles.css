@@ -613,6 +613,15 @@ body.lightbox-open {
   gap: 1rem;
 }
 
+.feature-subheading {
+  margin-top: 1.5rem;
+}
+
+.feature-gallery--admin {
+  margin-top: 1rem;
+}
+
+
 .feature-card {
   margin: 0;
   background: linear-gradient(
