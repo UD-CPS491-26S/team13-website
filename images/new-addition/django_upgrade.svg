@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Django upgrade 4.2 to 5.2">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#071422" />
+      <stop offset="1" stop-color="#0b3b2e" />
+    </linearGradient>
+    <linearGradient id="bar" x1="0" x2="1">
+      <stop offset="0" stop-color="#16a34a" />
+      <stop offset="1" stop-color="#60d39a" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" rx="18"/>
+  <g transform="translate(64,64)">
+    <text x="0" y="40" font-family="Inter, Arial, sans-serif" font-size="36" fill="#e6fff2">Django Upgrade</text>
+    <text x="0" y="84" font-family="Inter, Arial, sans-serif" font-size="20" fill="#bfefd0">Upgraded core framework and admin features</text>
+
+    <g transform="translate(0,120)">
+      <g>
+        <rect x="0" y="0" width="420" height="140" rx="10" fill="#fff" opacity="0.05" />
+        <text x="20" y="44" font-family="monospace" font-size="28" fill="#fff">Django 4.2</text>
+        <text x="20" y="84" font-family="sans-serif" font-size="14" fill="#cfeee0">Baseline: admin pages, search, exports</text>
+      </g>
+
+      <g transform="translate(520,0)">
+        <rect x="0" y="0" width="420" height="140" rx="10" fill="#fff" opacity="0.05" />
+        <text x="20" y="44" font-family="monospace" font-size="28" fill="#fff">Django 5.2</text>
+        <text x="20" y="84" font-family="sans-serif" font-size="14" fill="#cfeee0">Upgrades: new APIs, security, analytics</text>
+      </g>
+
+      <g transform="translate(440,46)">
+        <path d="M -40 18 L 0 0 L 40 18" fill="#fff" opacity="0.9"/>
+      </g>
+    </g>
+
+    <g transform="translate(0,300)">
+      <rect x="0" y="0" width="980" height="12" rx="6" fill="#123" />
+      <rect x="0" y="0" width="420" height="12" rx="6" fill="url(#bar)" />
+      <rect x="560" y="0" width="420" height="12" rx="6" fill="url(#bar)" opacity="0.85" />
+      <text x="0" y="38" font-family="sans-serif" font-size="12" fill="#9fe8c6">Admin features, exports, and analytics updated</text>
+    </g>
+
+    <g transform="translate(0,360)">
+      <rect x="0" y="0" width="220" height="120" rx="8" fill="#0a1f18" stroke="#123"/>
+      <text x="16" y="28" font-family="monospace" font-size="16" fill="#fff">Release Notes</text>
+      <text x="16" y="56" font-family="sans-serif" font-size="12" fill="#cfeee0">- Django 5.2.12 applied</text>
+      <text x="16" y="76" font-family="sans-serif" font-size="12" fill="#cfeee0">- Admin exports and analytics</text>
+      <text x="16" y="96" font-family="sans-serif" font-size="12" fill="#cfeee0">- Dependency updates</text>
+    </g>
+  </g>
+</svg>
