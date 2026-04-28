@@ -20,7 +20,9 @@ if (navToggle && siteNav) {
   });
 }
 
-const expandableImages = document.querySelectorAll(".flow-image-box img");
+const expandableImages = document.querySelectorAll(
+  ".flow-image-box img, .comparison-panel img",
+);
 
 if (expandableImages.length > 0) {
   const lightbox = document.createElement("div");

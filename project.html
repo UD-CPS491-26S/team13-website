@@ -22,7 +22,6 @@
           <a href="about.html">About</a>
           <a href="project.html">Project</a>
           <a href="team.html">Team</a>
-          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
@@ -40,7 +39,19 @@
         </div>
       </section>
 
-      <section class="section sprint-flow-section">
+      <section class="section project-tabs-section">
+        <div class="container">
+          <div class="project-tabs" aria-label="Project section navigation">
+            <a href="#sprint-0">Sprint 0</a>
+            <a href="#sprint-1">Sprint 1</a>
+            <a href="#commits">Commits</a>
+            <a href="#snapshot-comparisons">Snapshot Comparisons</a>
+            <a href="#additional-features">Additional Features</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sprint-flow-section" id="sprint-0">
         <div class="container">
           <div class="sprint-flow" aria-label="Sprint 0 content flow">
             <article class="flow-box sprint-zero-box description-box">
@@ -75,7 +86,7 @@
         </div>
       </section>
 
-      <section class="section sprint-flow-section">
+      <section class="section sprint-flow-section" id="sprint-1">
         <div class="container">
           <div class="sprint-flow" aria-label="Sprint 1 content flow">
             <article class="flow-box sprint-zero-box description-box">
@@ -97,7 +108,7 @@
         </div>
       </section>
 
-      <section class="section commits-section">
+      <section class="section commits-section" id="commits">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Interactive Timeline</p>
@@ -108,6 +119,45 @@
             </p>
           </div>
 
+          <section
+            class="section additional-features-section"
+            id="additional-features"
+          >
+            <div class="container">
+              <div class="section-heading">
+                <p class="eyebrow">New Work</p>
+                <h2>Additional Features</h2>
+                <p class="lead">
+                  These screenshots highlight the newest admin visualization
+                  work added to the project.
+                </p>
+              </div>
+
+              <div class="feature-gallery">
+                <figure class="feature-card">
+                  <img
+                    src="images/new-addition/Proposer_Network_Graph.jpeg"
+                    alt="Proposer network graph view 1"
+                  />
+                  <figcaption>Proposer network graph</figcaption>
+                </figure>
+                <figure class="feature-card">
+                  <img
+                    src="images/new-addition/Proposer_Network_Graph2.jpeg"
+                    alt="Proposer network graph view 2"
+                  />
+                  <figcaption>Proposer network graph detail</figcaption>
+                </figure>
+                <figure class="feature-card">
+                  <img
+                    src="images/new-addition/Proposer_Network_Graph3.jpeg"
+                    alt="Proposer network graph view 3"
+                  />
+                  <figcaption>Proposer network graph alternate view</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
           <ol class="commit-timeline">
             <li class="commit-step">
               <details class="commit-card">
@@ -139,6 +189,8 @@
                   </ul>
                 </div>
               </details>
+              </details>
+            </li>
             </li>
 
             <li class="commit-step">
@@ -232,9 +284,399 @@
                 </div>
               </details>
             </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">3/25/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Automated test coverage and developer documentation</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Added initial automated test coverage and documentation for
+                    developers, including important notes about the admin
+                    "honeypot" login behavior to prevent lockouts.
+                  </p>
+                  <ul>
+                    <li>
+                      Updated LocalDevSetup.md with honeypot login warning.
+                    </li>
+                    <li>
+                      Added tests for preprocess_date_ranges (fallback, gap
+                      handling, sorting/merging).
+                    </li>
+                    <li>
+                      Expanded AdvancedSearchDoc.md with steps to re-enable
+                      demographic filters.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/7/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Improved search and member results display</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Fixed a search issue when users type full names by splitting
+                    queries into terms and requiring each term to match name
+                    fields. Also removed the 8-result limit from the members
+                    page.
+                  </p>
+                  <ul>
+                    <li>
+                      Updated search logic to match first/last/pen name fields
+                      separately.
+                    </li>
+                    <li>
+                      Removed result slicing to show all member search results.
+                    </li>
+                    <li>Expanded test coverage with MembersSearchTests.</li>
+                    <li>
+                      Removed local_copy_clean.sql from repository for cleanup.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/7/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Django admin membership statistics and analytics</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Added a new Django admin page that calculates and displays
+                    average membership length based on members' date ranges.
+                  </p>
+                  <ul>
+                    <li>Created MembershipStatistics proxy model.</li>
+                    <li>
+                      Added logic to parse YYYY-YYYY date ranges and compute
+                      durations.
+                    </li>
+                    <li>
+                      Built custom admin template showing aggregate averages.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/7/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Proposer relationship visualization graph</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Introduced an interactive admin visualization for proposer
+                    relationships using a directed graph. Includes name
+                    normalization and a minimum component size filter to reduce
+                    noise.
+                  </p>
+                  <ul>
+                    <li>Added ProposerGraph proxy model.</li>
+                    <li>
+                      Built vis-network interactive graph with nodes/edges from
+                      proposer data.
+                    </li>
+                    <li>
+                      Implemented name normalization and variant handling.
+                    </li>
+                    <li>
+                      Added custom admin template for graph visualization.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/15/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Django 5.2.12 upgrade and dependency updates</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Upgraded the project to Django 5.2.12 with all compatible
+                    dependencies. Updated settings for the new django-axes
+                    backend and cleaned up legacy configurations.
+                  </p>
+                  <ul>
+                    <li>Bumped Django 4.2.7 → 5.2.12 in requirements.txt.</li>
+                    <li>
+                      Updated axes, ckeditor, import-export, and
+                      easy-thumbnails.
+                    </li>
+                    <li>
+                      Removed legacy apps: image_cropping, django_pandas, and
+                      AxesMiddleware.
+                    </li>
+                    <li>Updated AUTHENTICATION_BACKENDS in settings.</li>
+                    <li>
+                      Added migration for MembershipStatistics and ProposerGraph
+                      proxy models.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/19/26</span>
+                  <span class="commit-author">Henry</span>
+                  <span class="commit-title"
+                    >Excel export functionality for admin members page</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Added an Excel export action to the Django admin "Members"
+                    and "Honorary Members" pages, allowing admins to download
+                    data in spreadsheet form.
+                  </p>
+                  <ul>
+                    <li>
+                      Added export_model_with_related_objectsJSON
+                      (renamed/retitled).
+                    </li>
+                    <li>
+                      Added export_model_with_related_objectsEXCEL_MERGED to
+                      merge Member rows with related Date rows.
+                    </li>
+                    <li>Enabled formats: JSON, XLSX, CSV, XLS.</li>
+                    <li>
+                      Uses pandas, json_normalize, and openpyxl for spreadsheet
+                      generation.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/24/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Removed non-functional XLS export option</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Cleaned up admin export options by removing the legacy .xls
+                    format that was not working correctly.
+                  </p>
+                  <ul>
+                    <li>Dropped XLS from export formats in swj/admin.py.</li>
+                    <li>Retained export formats: JSON, XLSX, CSV.</li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/24/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Merge "wishlist items" and Django upgrade</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Merged multiple "wishlist" improvements including the Django
+                    5.2.12 upgrade, improved member search, proposer graph, and
+                    membership statistics features.
+                  </p>
+                  <ul>
+                    <li>Integrated Django upgrade and dependency updates.</li>
+                    <li>
+                      Added ProposerGraph and MembershipStatistics proxy models.
+                    </li>
+                    <li>Improved multi-word member search matching.</li>
+                    <li>Removed the "only show 8 results" limit.</li>
+                    <li>
+                      Added new admin analytics pages for relationships and
+                      statistics.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+
+            <li class="commit-step">
+              <details class="commit-card">
+                <summary>
+                  <span class="commit-date">4/24/26</span>
+                  <span class="commit-author">Tyler</span>
+                  <span class="commit-title"
+                    >Added Member.other_profession field and search</span
+                  >
+                </summary>
+                <div class="commit-body">
+                  <p>
+                    Added a new other_profession field to the Member model and
+                    integrated it through the admin and CSV import pipeline for
+                    storage and searching.
+                  </p>
+                  <ul>
+                    <li>Added other_profession field to swj/models.py.</li>
+                    <li>
+                      Created migration
+                      swj/migrations/0005_member_other_profession.py.
+                    </li>
+                    <li>
+                      Updated swj/admin.py and import_members.py for CSV
+                      pipeline.
+                    </li>
+                    <li>
+                      Added unit tests to ensure field persists correctly.
+                    </li>
+                    <li>
+                      Merged PR #5: "search-by-other-profession" feature branch.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
           </ol>
         </div>
       </section>
+
+      <section class="section snapshot-comparisons-section" id="snapshot-comparisons">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Visual Progress</p>
+            <h2>Website Snapshot Comparisons</h2>
+            <p class="lead">
+              Before and after screenshots showing the UI changes across the
+              project.
+            </p>
+          </div>
+
+          <div class="before-after-grid">
+            <article class="comparison-card">
+              <div class="comparison-header">
+                <span class="comparison-tag">Update 01</span>
+                <h3>Homepage</h3>
+              </div>
+              <div class="comparison-images">
+                <figure class="comparison-panel">
+                  <figcaption>Before</figcaption>
+                  <img src="images/before/Before_Homepage.jpeg" alt="Before - Homepage" style="width: 100%; height: auto" />
+                </figure>
+                <figure class="comparison-panel">
+                  <figcaption>After</figcaption>
+                  <img src="images/after/After_homepage.jpeg" alt="After - Homepage" style="width: 100%; height: auto" />
+                </figure>
+              </div>
+              <p class="comparison-note">Homepage redesign and improvements</p>
+            </article>
+
+            <article class="comparison-card">
+              <div class="comparison-header">
+                <span class="comparison-tag">Update 02</span>
+                <h3>Members Search (full name)</h3>
+              </div>
+              <div class="comparison-images">
+                <figure class="comparison-panel">
+                  <figcaption>Before</figcaption>
+                  <img src="images/before/before_members_search_full_name.jpeg" alt="Before - Members search full name" style="width: 100%; height: auto" />
+                </figure>
+                <figure class="comparison-panel">
+                  <figcaption>After</figcaption>
+                  <img src="images/after/after_members_search_full_name.jpeg" alt="After - Members search full name" style="width: 100%; height: auto" />
+                </figure>
+              </div>
+              <p class="comparison-note">Member search: full-name search behavior</p>
+            </article>
+
+            <article class="comparison-card">
+              <div class="comparison-header">
+                <span class="comparison-tag">Update 03</span>
+                <h3>Members List</h3>
+              </div>
+              <div class="comparison-images">
+                <figure class="comparison-panel">
+                  <figcaption>Before</figcaption>
+                  <img src="images/before/before_name_search.jpeg" alt="Before - Members list" style="width: 100%; height: auto" />
+                </figure>
+                <figure class="comparison-panel">
+                  <figcaption>After</figcaption>
+                  <img src="images/after/after_members.jpeg" alt="After - Members list" style="width: 100%; height: auto" />
+                </figure>
+              </div>
+              <p class="comparison-note">Members listing and search improvements</p>
+            </article>
+
+            <article class="comparison-card">
+              <div class="comparison-header">
+                <span class="comparison-tag">Update 04</span>
+                <h3>Name Bug</h3>
+              </div>
+              <div class="comparison-images">
+                <figure class="comparison-panel">
+                  <figcaption>Before</figcaption>
+                  <img src="images/before/before_name_bug.jpeg" alt="Before - Name bug" style="width: 100%; height: auto" />
+                </figure>
+                <figure class="comparison-panel">
+                  <figcaption>After</figcaption>
+                  <img src="images/after/After_name_bug.jpg" alt="After - Name bug" style="width: 100%; height: auto" />
+                </figure>
+              </div>
+              <p class="comparison-note">Name bug fix and display cleanup</p>
+            </article>
+
+            <article class="comparison-card">
+              <div class="comparison-header">
+                <span class="comparison-tag">Update 05</span>
+                <h3>Honorary Members Page</h3>
+              </div>
+              <div class="comparison-images">
+                <figure class="comparison-panel">
+                  <figcaption>Before</figcaption>
+                  <img src="images/before/Before_Honorary_page.jpeg" alt="Before - Honorary page" style="width: 100%; height: auto" />
+                </figure>
+                <figure class="comparison-panel">
+                  <figcaption>After</figcaption>
+                  <img src="images/after/After_Honorary_Members.jpeg" alt="After - Honorary page" style="width: 100%; height: auto" />
+                </figure>
+              </div>
+              <p class="comparison-note">Honorary members page update</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer class="site-footer">
